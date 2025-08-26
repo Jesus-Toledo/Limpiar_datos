@@ -2,7 +2,7 @@ import pandas as pd
 from datetime import datetime, timedelta
 
 # Cargar el archivo Excel
-archivo = 'zona20.xlsx'
+archivo = 'MACHOTE_ALARMAS.xlsx'
 hoja1 = pd.read_excel(archivo, sheet_name='Hoja1', engine='openpyxl')
 hoja2 = pd.read_excel(archivo, sheet_name='Hoja2', engine='openpyxl')
 codigos = pd.read_excel(archivo, sheet_name='Codigos', engine='openpyxl')
@@ -65,6 +65,6 @@ hoja1_filtrada.fillna('SIN DATO', inplace=True)
 
 # Reordenar y guardar
 hoja1_filtrada = hoja1_filtrada[columnas_deseadas]
-hoja1_filtrada.to_excel('zona20_limpio_completo.xlsx', index=False)
+hoja1_filtrada.to_excel('DOC_LIMPIO.xlsx', index=False)
 
-print("Archivo limpio generado exitosamente como 'zona20_limpio_completo.xlsx'.")
+print("Archivo limpio generado exitosamente como 'DOC_LIMPIO.xlsx'.")
